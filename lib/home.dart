@@ -1,3 +1,4 @@
+import 'package:embiste_llc_project/information.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -24,13 +25,14 @@ class HomePage extends StatelessWidget {
       SliverList(
           delegate: SliverChildListDelegate([
         Container(
-          color: Colors.red,
+          color: Colors.grey.shade300,
           height: 200,
           child: Column(children: [
             Text(
-              "Jordi El Wild",
+              "Who we are",
               style: TextStyle(fontSize: 30),
-            )
+            ),
+            Information()
           ]),
         ),
         Container(
