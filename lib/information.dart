@@ -23,9 +23,19 @@ class _InformationState extends State<Information> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [ExpandBox(), ExpandBox()],
             ),
-            ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 400), child: Text(text)),
-            Expanded(child: Icon(Icons.ac_unit))
+            Row(children: [
+              ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: 400),
+                  child: Text(text)),
+              Expanded(
+                  child: ConstrainedBox(
+                      constraints: BoxConstraints(maxWidth: 400),
+                      child: Container(
+                          color: Colors.amber,
+                          height: 200,
+                          width: 200,
+                          child: Image(image: AssetImage("assets/mango.png")))))
+            ]),
           ],
         ));
   }

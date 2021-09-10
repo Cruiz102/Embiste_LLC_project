@@ -26,7 +26,7 @@ class _ExpandBoxState extends State<ExpandBox> {
           color: selected ? Colors.red : Colors.blue,
           duration: const Duration(seconds: 1),
           curve: Curves.fastOutSlowIn,
-          child: const FlutterLogo(size: 75),
+          child: Icon(Icons.local_movies_outlined),
         ),
       ),
     );
