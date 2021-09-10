@@ -39,7 +39,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var upperIcons = Container(
+  var upperHome = Container(
       height: 100,
       width: 100,
       child: InkWell(
@@ -53,6 +53,34 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.black,
         ),
       ));
+  var upperContacts = Container(
+      height: 100,
+      width: 100,
+      child: InkWell(
+        onHover: (a) {},
+        hoverColor: Colors.green,
+        onTap: () {
+          print("d");
+        },
+        child: Icon(
+          Icons.contact_phone,
+          color: Colors.black,
+        ),
+      ));
+  var upperInfo = Container(
+      height: 100,
+      width: 100,
+      child: InkWell(
+        onHover: (a) {},
+        hoverColor: Colors.green,
+        onTap: () {
+          print("d");
+        },
+        child: Icon(
+          Icons.info,
+          color: Colors.black,
+        ),
+      ));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
           foregroundColor: Colors.white,
           backgroundColor: Colors.white,
           toolbarHeight: 100,
-          title: Center(child: Row(children: [upperIcons])),
+          actions: [upperHome, upperContacts, upperInfo],
           leading: Container(
             child: ConstrainedBox(
                 constraints: BoxConstraints(maxHeight: 200, maxWidth: 200),
